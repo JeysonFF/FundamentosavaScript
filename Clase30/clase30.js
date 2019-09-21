@@ -20,7 +20,7 @@ obtenerPersonaje(1,function (){
                 obtenerPersonaje(5, function(){
                     obtenerPersonaje(6, function(){
                         obtenerPersonaje(7);
-                    })
+                    }) 
                 }) 
             })
         })
