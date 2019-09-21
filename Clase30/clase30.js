@@ -11,8 +11,19 @@ function obtenerPersonaje(id, callback){
     }
 }
 
-obtenerPersonaje(1, ()=>obtenerPersonaje(2,()=>obtenerPersonaje(3)));
-
+obtenerPersonaje(1,function (){
+    obtenerPersonaje(2, function(){
+        obtenerPersonaje(3,function(){
+            obtenerPersonaje(4, function(){
+                obtenerPersonaje(5, function(){
+                    obtenerPersonaje(6, function(){
+                        obtenerPersonaje(7);
+                    })
+                }) 
+            })
+        })
+    })
+});
 
 
 
