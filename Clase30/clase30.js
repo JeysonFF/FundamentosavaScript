@@ -3,29 +3,24 @@ const PEOPLE_URL ='people/:id';
 
 const opts = { crossDomain: true};
 
-function obtenerPersonaje(id, callback){
-    const url = `${API_URL}${PEOPLE_URL.replace(':id', id)}`;
-    $.get(url, opts, function(data){
-        console.log(`Hola, yo soy ${data.name}`)
-		 if(callback){
-        callback();}
-	});
-   
-}
-
-obtenerPersonaje(1,function (){
-    obtenerPersonaje(2, function(){
-        obtenerPersonaje(3,function(){
-            obtenerPersonaje(4, function(){
-                obtenerPersonaje(5, function(){
-                    obtenerPersonaje(6, function(){
-                        obtenerPersonaje(7);
-                    }) 
-                }) 
-            })
-        })
-    })
-});
+const obtenerPersonaje=(id, callback)=>{
+    const url = `${API_URL}${PEOPLE_URL.replace(':id', id)}`
+    $.get(url, opts, (data)=>{console.log(`Hola, yo soy ${data.name}`);if(callback){callback();}});
+    }
+    
+obtenerPersonaje(1,()=>
+    obtenerPersonaje(2, () =>
+        obtenerPersonaje(3,()=>
+            obtenerPersonaje(4, ()=>
+                obtenerPersonaje(5, ()=>
+                    obtenerPersonaje(6, ()=>
+                        obtenerPersonaje(7)
+                    ) 
+                ) 
+            )
+        )
+    )
+);
 
 
 
