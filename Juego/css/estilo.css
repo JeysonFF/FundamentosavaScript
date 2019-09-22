@@ -4,6 +4,7 @@ body {
     display: flex;
     align-items: center;
     height: 100vh;
+    background-color: #7ed6df;
   }
 
   .gameboard {
@@ -79,4 +80,8 @@ body {
 
   * {
     font-family: 'Arial';
+  }
+  #number {
+    font-size:50px;
+    color:#434343;
   }
