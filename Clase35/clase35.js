@@ -15,12 +15,12 @@ const obtenerPersonaje = (id)=>{
 
 const onError = (id)=>console.log(`Sucedió un error al obtener el personaje ${id}`);
 
-async function getPersonajes(){
+let  getPersonajes=async()=>{
     var ids = [1,2,3,4,5,6,7];
     var promises = ids.map((id) => obtenerPersonaje(id));
     try {
         var data = await Promise.all(promises);    
-        console.log(data);
+        console.log(data)
     } catch (id) {
         onError(id);
     }
