@@ -1,6 +1,6 @@
 function crearSaludo(finalDeFrase){
     return function(nombre){
-        console.log(`${nombre} ${finalDeFrase}`)
+        console.log(`hola ${nombre} ${finalDeFrase}`)
     }
 }
 
@@ -10,4 +10,4 @@ const saludoColombiano = crearSaludo('amigo');
 
 saludoArgentino('Jesus');
 saludoMexicano ('Jesus');
-saludoColombiano('Jesus')
+saludoColombiano('Jesus');
